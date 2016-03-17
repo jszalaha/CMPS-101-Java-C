@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1426125927 source:c:\users\jordan zalaha\desktop\findcomponents\findcomponents.c
+	<string.h>
+	"Graph.h"
+
+1426125927 source:c:\users\jordan zalaha\desktop\findcomponents\graph.c
+	"Graph.h"
+
+1426124015 c:\users\jordan zalaha\desktop\findcomponents\graph.h
+	"List.h"
+
+1426121335 c:\users\jordan zalaha\desktop\findcomponents\list.h
+	<stdio.h>
+	<stdlib.h>
+
+1426121314 source:c:\users\jordan zalaha\desktop\findcomponents\list.c
+	"List.h"
+
+1426119915 source:c:\users\jordan zalaha\desktop\findcomponents\graphtest.c
+	"Graph.h"
+

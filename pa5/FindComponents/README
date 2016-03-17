@@ -1,0 +1,60 @@
+/*
+ * Jordan Zalaha
+ * ID: 1438462
+ * Programming Assignment 5
+ */
+//-----------------------------------------------------------------------------
+//  README
+//-----------------------------------------------------------------------------
+
+-Graph.h-
+The header file containing all prototypes for Graph.c
+
+-Graph.c-
+This is a Graph ADT that uses an array of Lists to create an adjacency list
+representation of a graph of n vertices with edges specified by the input file.
+It also contains the function of performing a Depth First Search of the Graph
+that assigns each vertex in the graph with a parent vertex, a discovery time,
+and a finish time. Vertices are maintained in a stack sorted by decreasing
+finish time after the completion of DFS(). This ADT also has the function of
+creating the transpose of any other graph (all directed edges are reversed).
+This, together with DFS() is used by FindComponents.c to find the strongly
+connected components of a graph.
+Very few changes were made to this ADT between pa4 and pa5. I replaced BFS
+with DFS, removed the makeNull() function, replaced the distance property of
+vertices with discover and finish time variables, added a counter variable
+to keep track of the number of strongly connected components in G, and
+implemented a Visit() function to serve as a a private helper routine for DFS().
+Although Visit() is declared and implemented as a top level function in the
+Graph ADT, its only usage (and purpose) is inside itself and DFS(), and is
+not intended to be called directly by the user.
+
+-GraphTest.c-
+A basic test file for the graph ADT.
+
+-FindComponents.c-
+The main client. This takes input from a text file entered on the command line
+as the first argument after the executable. It then uses the Graph and List
+ADTs to form an adjacency list representation of the graph specified by the
+input. It then calls a Depth First Search operation once on the created graph
+and then a second time on the transpose of that graph using the decreasing
+finish time sorted stack from the first call of DFS() as processing order to
+find the strongly connected components of the graph. It then will print the
+adjacency list representation of the graph as well as list its strongly
+connected components in the output file designated on the command line.
+
+-List.h-
+The header file containing all prototypes for List.c
+
+-List.c-
+This is a doubly linked List ADT that includes a "cursor" for navigating list
+nodes. This ADT is used by Graph.c to implement an adjacency list
+representation of the input graph as well as create a stack for the purpose of
+performing a Depth First Search on the vertices of said graph.
+
+-Makefile-
+Used to compile the above .h and .c files and create an executable .exe file
+called FindPath. Also contains a clean utility that deletes all object files
+and the created .exe file from the current directory.
+
+-README-

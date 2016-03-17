@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1422221296 source:c:\users\jordan zalaha\desktop\lex\lex.c
+	<string.h>
+	"List.h"
+
+1422213773 c:\users\jordan zalaha\desktop\lex\list.h
+	<stdio.h>
+	<stdlib.h>
+
+1422220340 source:c:\users\jordan zalaha\desktop\lex\list.c
+	"List.h"
+
